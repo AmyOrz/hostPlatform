@@ -1,0 +1,1 @@
+external convertDomToJsObj : Dom.event => Js.t({..}) = "%identity";

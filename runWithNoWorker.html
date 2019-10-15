@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <title>Wonder</title>
+    <style>
+        #stream-loading {
+            display: none;
+        }
+
+        #stream-loading .loading-img {
+            display: block;
+            width: 250px;
+            height: 250px;
+        }
+
+        #stream-loading .loading-text {
+            color: #e7981f;
+            margin-top: 10px;
+            font-size: 85px;
+            font-weight: bold;
+        }
+
+        #whole-loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: #1d1b22;
+        }
+
+        #whole-loading .loading-content {
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #whole-loading .loading-content .loading-img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #whole-loading .loading-content .loading-text {
+            color: #e7981f;
+            margin-top: 10px;
+            font-size: 85px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="stream-loading">
+        <img id="logo" class="loading-img" src="/img/logo.png" />
+        <br />
+        <span id="text" class="loading-text"></span>
+    </div>
+
+
+    <div id="whole-loading">
+        <div class="loading-content">
+            <div>
+                <img id="logo" class="loading-img" src="/img/logo.png" />
+            </div>
+            <div>
+                <div id="text" class="loading-text"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="/js/common/commonForNoWorkerAndWorker.js"></script>
+    <script src="/js/wd.js"></script>
+
+    <script>
+        function _initScriptAPIJob(_, state) {
+            return initScriptAPIJob(
+                state
+            );
+        }
+
+        function _registerJobs(state) {
+            var state = wd.registerNoWorkerInitJob("init_script_api", _initScriptAPIJob, state);
+
+            return state;
+        }
+
+        window.onload = function () {
+            if (
+                AssetTool.isSupportStreamLoad()
+            ) {
+                AssetTool.showStreamLoading();
+            }
+            else {
+                AssetTool.showWholeLoading();
+            }
+
+            var searchURL = window.location.search;
+            searchURL = searchURL.substring(1, searchURL.length);
+            var repoId = searchURL.split("&")[0].split("=")[1];
+
+            let serverPath = AssetTool.getServerPath();
+
+            fetch(AssetTool.getServerRepoPublish(repoId))
+                .then(response => response.json())
+                .then(response => {
+                    let result = response.data.repoPublish[0];
+
+                    if (result === null || result === undefined) {
+                        alert("can't find publishRepo with repoId")
+                    } else {
+                        let configDirPath = serverPath + result.config_dir_path;
+                        let wdbFilePath = serverPath + result.wdb_file_path;
+                        let wdbSize = result.wdb_size;
+
+                        return AssetTool.loadConfig([
+                            configDirPath + "setting.json",
+                            configDirPath
+                        ], null, function () {
+                            var state = wd.unsafeGetState();
+
+                            var state = _registerJobs(state);
+
+
+                            return AssetTool.loadStreamWDBWithWDBSize(
+                                wdbFilePath,
+                                wdbSize,
+                                function (totalLoadedByteLength, contentLength, wdbPath) {
+                                    AssetTool.showOrCreateLoadingInfo(
+                                        totalLoadedByteLength,
+                                        contentLength
+                                    );
+                                },
+                                function (state, gameObject) {
+                                    return state;
+                                },
+                                function (state, gameObject) {
+                                    AssetTool.removeLoadingInfo();
+
+                                    var state = wd.addSceneChild(gameObject, state);
+
+                                    return state;
+                                },
+                                function (state, _, gameObject) {
+                                    AssetTool.removeLoadingInfo();
+
+                                    var state = wd.addSceneChild(gameObject, state);
+
+                                    wd.startDirector(state);
+                                }, state);
+                        });
+                    }
+
+                });
+
+        }
+    </script>
+</body>
+
+</html>

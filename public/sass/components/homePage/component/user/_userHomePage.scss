@@ -1,0 +1,92 @@
+.wonder-user-homePage{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .homePage-content{
+        width:100%;
+        flex: initial;
+        .content-personal{
+            height:160px;
+            width: 100%;
+            background-image: url("/img/home-bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .personal-content{
+                width:80%;
+                height:100px;
+                display: flex;
+                .content-img{
+                    height:100px;
+                    width:100px;
+                }
+                .content-info{
+                    display: flex; 
+                    flex-direction: column;
+                    align-items: center;
+                    color:#fff;
+                    margin-left: 20px;
+                    .info-userName{
+                        width:200px;
+                        height:40px;
+                        font-size:30px;
+                        margin-top:6px;
+                    }
+                    .info-nickName{
+                        width:200px;
+                        height:30px;
+                        font-size:17px;
+                        margin-top:10px;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+        .content-nav{
+            height:65px;
+            display: flex;
+            background:  #F4F4F2;
+            border-bottom: 1px solid #D5D9D8;
+            .nav-white{
+                flex: initial;
+                width:10%;
+            }
+            .nav-item{
+                flex:initial;
+                width:150px;
+                height:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-left: 1px solid #D5D9D8;
+                img{
+                    width:22px;
+                    height:22px;
+                }
+                .item-text{
+                    margin: 4px 0 0 10px;
+                    font-size:16px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                &:last-child{
+                    border-right: 1px solid #D5D9D8;
+                }
+            }
+            .nav-active{
+                background: #ffffff;
+                border-bottom: 1px solid #ffffff;
+                color:#F16524;
+            }
+        }
+    }
+    @import "./userSetting";
+    @import "./userProject";
+}

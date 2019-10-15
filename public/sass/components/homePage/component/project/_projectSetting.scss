@@ -1,0 +1,61 @@
+.wonder-project-setting{
+    width:60%;
+    .user-item{
+        width:100%;
+        border-bottom: 2px solod #000;
+        display: flex;
+        margin:20px 0 20px 0;
+        align-items: center;
+        position: relative;
+        .item-title{
+            flex:initial;
+            font-size:18px;
+            width:20%;
+            text-align: center;
+        }
+        .item-content{
+            flex:initial;
+            width:80%;
+            @import "../../../ui/imgUpload";
+            input{
+                width:100%;
+                height:45px;
+                font-size:20px;
+            }
+        }
+        .item-save{
+            position: absolute;
+            right: 0px;
+            top:30px;
+            width:120px;
+            height:44px;
+            display: flex;
+            background:#F16524;
+            text-decoration: none;
+            color:#fff;
+            display: flex;
+            .save-text{
+                width:70px;
+                height:44px;
+                line-height: 44px;
+                text-align: center;
+                font-size:16px;
+                
+            }
+            .save-img{
+                width:50px;
+                height:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width:30px;
+                    height:30px;
+                }
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+$itemWith : 370px;
+$itemHeight : 420px;
+
+.wonder-publish-repo{
+    width: 100%;
+    height:100%;
+
+    .repo-list{
+        width: 90%;
+        margin-left:10%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom:30px;
+        .repo-item{
+            width: $itemWith;
+            height:$itemHeight;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            .item-img{
+                width:300px;
+                height:300px;
+                margin-top:35px;
+                position: relative;
+                a {
+                    width:300px;
+                    height:300px;
+                    .img-views{
+                        position: absolute;
+                        height:30px;
+                        color: rgba(255,255,255,0.75);
+                        background: rgba(50,68,71,0.75);
+                        right:10px;
+                        top:10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 5px 15px 5px 15px;
+                        img{
+                            width:20px;
+                            height:20px;
+                        }
+                        span{
+                            margin-left:13px;
+                        }
+                    }
+                    .img-content{
+                        width:300px;
+                        height:300px;
+                    }
+                }
+            }
+            .item-repoName{
+                width:300px;
+                font-size:22px;
+                font-weight: bold;
+                margin-top:12px;
+                &:hover{
+                    color:#2999F0;
+                    cursor: pointer;
+                }
+            }
+            .item-userName{
+                width:300px;
+                font-size:18px;
+                &:hover{
+                    color:#2999F0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .repo-load{
+        width:80%;
+        margin-left:10%;
+        height:80px;
+        background: #F1F1EF;
+        color:#324447;
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:26px;
+        margin-top:10px;
+        margin-bottom:40px;
+        &:hover{
+            opacity: 1;
+            background: rgb(228, 228, 228);
+        }
+    }
+}

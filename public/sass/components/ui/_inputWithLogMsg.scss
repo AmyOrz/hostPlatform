@@ -1,0 +1,11 @@
+.wonder-input-logMsg{
+    input{
+        height:36px;
+    }
+    .ant-alert-info, .ant-alert-error,.ant-alert-success,.ant-alert-warning{
+        padding:2px 48px 2px 38px;
+        .ant-alert-icon{
+            top:5px;
+        }
+    }
+}

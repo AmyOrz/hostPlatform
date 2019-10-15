@@ -1,0 +1,176 @@
+.wonder-target-project{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .project-content{
+        width:100%;
+        flex: initial;
+        .content-repo{
+            height:300px;
+            width: 100%;
+            background-image: url("/img/home-bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .repo-content{
+                width:70%;
+                display: flex;
+                .content-img{
+                    flex:auto;
+                    height:200px;
+                    width:200px;
+                    min-width:200px;
+                }
+                .content-info{
+                    flex:auto;
+                    width:90%;
+                    flex-direction: column;
+                    display: flex; 
+                    color:#fff;
+                    margin-left: 30px;
+                    .info-name{
+                        font-size:36px;
+                        margin-top:-10px;
+                        font-weight: bold;
+                    }
+                    .info-describe{
+                        font-size:22px;
+                        margin-top:10px;
+                    }
+                    .info-operate{
+                        width:100%;
+                        display: flex;
+                        margin-top:30px;
+                        .operate-editor, .operate-run{
+                            width:150px;
+                            height:44px;
+                            display: flex;
+                            background:#F16524;
+                            margin-right:20px;
+                            a{
+                                text-decoration: none;
+                                color:#fff;
+                                display: flex;
+                                width:100%;
+                                height:100%;
+                                .item-text{
+                                    width:100px;
+                                    height:44px;
+                                    line-height: 44px;
+                                    text-align: center;
+                                    font-size:16px;
+                                    
+                                }
+                                .item-img{
+                                    width:50px;
+                                    height:100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    img{
+                                        width:30px;
+                                        height:30px;
+                                    }
+                                }
+                            }
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        .operate-run{
+                            width:120px;
+                            a{
+                                .item-text{
+                                    width:70px;
+                                }
+                                .item-img{
+                                    width:50px;
+                                }
+                            }
+                        }
+                        .operate-views, .operate-fork {
+                            width:134px;
+                            height:44px;
+                            margin-right:20px;
+                            display: flex;
+                            .item-text{
+                                width:90px;
+                                background:rgba(0,0,0,0.3);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color:rgba(255,255,255,0.7);
+                                font-size:16px;
+                                img{
+                                    width:18px;
+                                    height:18px;
+                                    margin-right:7px;
+                                }
+                            }
+                            .item-count{
+                                width:44px;
+                                height:44px;
+                                line-height: 44px;
+                                font-size:16px;
+                                text-align: center;
+                                background:rgba(0,0,0,0.12);
+                            }
+                        }
+                        .operate-fork {
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-nav{
+            height:65px;
+            display: flex;
+            background:  #F4F4F2;
+            border-bottom: 1px solid #D5D9D8;
+            .nav-white{
+                flex: initial;
+                width:10%;
+            }
+            .nav-item{
+                flex:initial;
+                width:150px;
+                height:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-left: 1px solid #D5D9D8;
+                img{
+                    width:22px;
+                    height:22px;
+                }
+                .item-text{
+                    margin: 4px 0 0 10px;
+                    font-size:16px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                &:last-child{
+                    border-right: 1px solid #D5D9D8;
+                }
+            }
+            .nav-active{
+                background: #ffffff;
+                border-bottom: 1px solid #ffffff;
+                color:#F16524;
+            }
+        }
+    }
+    @import "./projectOverView";
+    @import "./projectSetting";
+}

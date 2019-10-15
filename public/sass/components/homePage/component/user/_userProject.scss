@@ -1,0 +1,138 @@
+$itemSize:110px;
+
+.wonder-user-project{
+    width:90%;
+    display: flex;
+    .project-nav{
+        flex:initial;
+        width:15%;
+        margin-left:5%;
+        margin-top:25px;
+        .nav-item{
+            width:100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #D5D9D8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .item-title{
+                font-size:18px;
+                margin-top:20px;
+                color: rgba(50,68,71,0.5);
+                &:hover{
+                    color:#324447;
+                }
+            }
+            .item-active{
+                color:#2999F0;
+            }
+            .item-upgrade{
+                .upgrade-title{
+                    font-size:14px;
+                    color: rgba(50,68,71,0.5);
+                    margin-top:20px;
+                    margin-bottom:5px;
+                }
+                .upgrade-content{
+                    font-size: 18px;
+                    color:#000;
+                }
+            }
+        }
+    }
+    .project-content{
+        flex:initial;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        width:80%;
+        .repo-item{
+            width:80%;
+            height:135px;
+            flex:initial;
+            display: flex;
+            margin-top:20px;
+            margin-left:50px;
+            border-bottom: 1px solid #D5D9D8;
+            .item-profile{
+                flex:initial;
+                width:$itemSize;
+                height:$itemSize;
+                img{
+                    width:$itemSize;
+                    height:$itemSize;
+                }
+                &:hover{
+                    cursor: pointer;
+                    color:#2999F0;
+                }
+            }
+            .item-content{
+                flex:1;
+                height:$itemSize;
+                margin-left: 20px;
+                .item-name{
+                    font-size:24px;
+                    font-weight: bold;
+                    color: #324447;
+                    &:hover{
+                        cursor: pointer;
+                        color:#2999F0;
+                    }
+                }
+                .item-data{
+                    height:26px;
+                    display: flex;
+                    font-size:14px;
+                    margin-top:5px;
+                    .data-item{
+                        flex: initial;
+                        height:26px;
+                        line-height:26px;
+                        border-right: 1px solid #D5D9D8;
+                        display: flex;
+                        margin-right:20px;
+                        .item-title{
+                            color:#9ca9aa;
+                            height:26px;
+                            line-height:26px;
+                            img{
+                                width:24px;
+                                height:24px;
+                            }
+                        }
+                        .title-date{
+                            width:70px;
+                        }
+                        .item-date{
+                            width:150px;
+                        }
+                        .title-access{
+                            width:50px;
+                        }
+                        .item-access{
+                            width:80px;
+                        }
+                        .item-number{
+                            font-size:16px;
+                            width:50px;
+                            margin-left:20px;
+                            padding-top:3px;
+                        }
+                    }
+
+                }
+                .item-operate{
+                    height:35px;
+                    margin-top:13px;
+                    display: flex;
+                    .operate-item{
+                        flex:initial;
+                        margin-right:20px;
+                    }
+                }
+            }
+        }
+    }
+}

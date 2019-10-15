@@ -1,0 +1,68 @@
+.wonder-publishRepo-main{
+    width:100%;
+    height:100%;
+    .homePage-content{
+        width:100%;
+        .content-personal{
+            height:140px;
+            width: 100%;
+            background-image: url("/img/home-bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .personal-content{
+                width:80%;
+                height:100px;
+                line-height: 100px;
+                color:#fff;
+                display: flex;
+                font-size:30px;
+                font-weight: bold;
+
+            }
+        }
+        .content-nav{
+            height:65px;
+            display: flex;
+            background:  #F4F4F2;
+            border-bottom: 1px solid #D5D9D8;
+            .nav-white{
+                flex: initial;
+                width:10%;
+            }
+            .nav-item{
+                flex:initial;
+                width:150px;
+                height:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-left: 1px solid #D5D9D8;
+                img{
+                    width:22px;
+                    height:22px;
+                }
+                .item-text{
+                    margin: 4px 0 0 10px;
+                    font-size:16px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                &:last-child{
+                    border-right: 1px solid #D5D9D8;
+                }
+            }
+            .nav-active{
+                background: #ffffff;
+                border-bottom: 1px solid #ffffff;
+                color:#F16524;
+            }
+        }
+    }
+    @import "./publishRepoList";
+}

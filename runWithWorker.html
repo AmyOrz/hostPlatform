@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="icon" href="/image/favicon.ico" type="image/x-icon" />
+
+    <title>Wonder</title>
+    <style>
+        #stream-loading {
+            display: none;
+        }
+
+        #stream-loading .loading-img {
+            display: block;
+            width: 250px;
+            height: 250px;
+        }
+
+        #stream-loading .loading-text {
+            color: #e7981f;
+            margin-top: 10px;
+            font-size: 85px;
+            font-weight: bold;
+        }
+
+        #whole-loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: #1d1b22;
+        }
+
+        #whole-loading .loading-content {
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #whole-loading .loading-content .loading-img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #whole-loading .loading-content .loading-text {
+            color: #e7981f;
+            margin-top: 10px;
+            font-size: 85px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="detect" style="display: none">your browser not support sharedArrayBuffer or offscreenCanvas, can't use worker.
+    </h1>
+
+    <div id="stream-loading">
+        <img id="logo" class="loading-img" src="/image/logo.png" />
+        <br />
+        <span id="text" class="loading-text"></span>
+    </div>
+
+
+    <div id="whole-loading">
+        <div class="loading-content">
+            <div>
+                <img id="logo" class="loading-img" src="/image/logo.png" />
+            </div>
+            <div>
+                <div id="text" class="loading-text"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/js/common/commonForNoWorkerAndWorker.js"></script>
+
+
+    <script src="/js/wd.js"></script>
+    <script src="/js/wd.render.worker.js"></script>
+
+    <script>
+        function _initScriptAPIJob(stateData) {
+            var state = initScriptAPIJob(
+                wd.getStateFromData(stateData)
+            );
+
+
+            wd.setState(state);
+        }
+
+        function _addJobs(state) {
+            var state = wd.addWorkerMainInitJob(["init_script_api", "init_script"], 0, _initScriptAPIJob, state);
+
+            return state;
+        }
+
+        window.onload = function () {
+            if (wd.isSupportRenderWorkerAndSharedArrayBuffer() === false) {
+                document.querySelector("#detect").style.display = "block";
+
+                return;
+            }
+            else {
+                document.querySelector("#detect").style.display = "none";
+            }
+
+
+            if (
+                AssetTool.isSupportStreamLoad()
+            ) {
+                AssetTool.showStreamLoading();
+            }
+            else {
+                AssetTool.showWholeLoading();
+            }
+
+            return AssetTool.loadConfig(["./config/setting.json", "./config/"], null, function () {
+                var state = wd.unsafeGetState();
+
+                var state = _addJobs(state);
+
+                return AssetTool.loadStreamWDB("./Scene.wdb",
+                    function (totalLoadedByteLength, contentLength, wdbPath) {
+                        AssetTool.showOrCreateLoadingInfo(
+                            totalLoadedByteLength,
+                            contentLength
+                        );
+                    },
+                    function (state, gameObject) {
+                        return state;
+                    },
+                    function (state, gameObject) {
+                        AssetTool.removeLoadingInfo();
+
+                        var state = wd.addSceneChild(gameObject, state);
+
+                        return state;
+                    },
+                    function (state, _, gameObject) {
+                        AssetTool.removeLoadingInfo();
+
+                        var state = wd.addSceneChild(gameObject, state);
+
+                        wd.startDirector(state);
+                    }, state);
+            });
+        }
+    </script>
+</body>
+
+</html>

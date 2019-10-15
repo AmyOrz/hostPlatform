@@ -1,0 +1,839 @@
+html, body {
+  height: 100%; }
+  html ul, body ul {
+    list-style-type: none; }
+  html a, body a {
+    text-decoration: none; }
+    html a:visited, body a:visited {
+      text-decoration: none; }
+    html a:hover, body a:hover {
+      text-decoration: none; }
+    html a:active, body a:active {
+      text-decoration: none; }
+  html #index, body #index {
+    width: 100%;
+    height: 100%; }
+
+.wonder-app {
+  width: 100%;
+  height: 100%; }
+  .wonder-app .wonder-userSign {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; }
+    .wonder-app .wonder-userSign .app-bg {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: -100; }
+      .wonder-app .wonder-userSign .app-bg img {
+        width: 100%;
+        height: 100%; }
+    .wonder-app .wonder-userSign .app-content {
+      width: 380px;
+      height: 580px; }
+      .wonder-app .wonder-userSign .app-content .content-sign {
+        width: 100%;
+        background: #ffffff; }
+        .wonder-app .wonder-userSign .app-content .content-sign .sign-header {
+          width: 100%;
+          height: 100px;
+          display: flex; }
+          .wonder-app .wonder-userSign .app-content .content-sign .sign-header .header-item {
+            flex: 1;
+            text-align: center;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .wonder-app .wonder-userSign .app-content .content-sign .sign-header .header-item .item-content {
+              display: inline-block;
+              padding: 5px; }
+              .wonder-app .wonder-userSign .app-content .content-sign .sign-header .header-item .item-content:hover {
+                cursor: pointer; }
+            .wonder-app .wonder-userSign .app-content .content-sign .sign-header .header-item .item-active {
+              border-bottom: 1px solid #F16524;
+              color: #F16524; }
+          .wonder-app .wonder-userSign .app-content .content-sign .sign-header img {
+            width: 80px;
+            height: 80px; }
+        .wonder-app .wonder-userSign .app-content .content-sign .sign-content {
+          width: 100%; }
+          .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signIn, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp {
+            width: 100%; }
+            .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signIn input, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp input {
+              height: 50px; }
+            .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signIn .submit-btn, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .submit-btn {
+              width: 100%;
+              height: 55px;
+              font-size: 17px; }
+          .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg input {
+            height: 36px; }
+          .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-info, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-error, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-success, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-warning {
+            padding: 2px 48px 2px 38px; }
+            .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-info .ant-alert-icon, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-error .ant-alert-icon, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-success .ant-alert-icon, .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .wonder-input-logMsg .ant-alert-warning .ant-alert-icon {
+              top: 5px; }
+          .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp input {
+            height: 36px; }
+          .wonder-app .wonder-userSign .app-content .content-sign .sign-content .wonder-signUp .submit-btn {
+            height: 41px; }
+      .wonder-app .wonder-userSign .app-content .content-footer {
+        height: 100%;
+        padding-top: 20px; }
+        .wonder-app .wonder-userSign .app-content .content-footer hr {
+          width: 100%;
+          color: #fff;
+          opacity: 0.5; }
+        .wonder-app .wonder-userSign .app-content .content-footer .footer-text {
+          margin-top: 20px;
+          width: 100%;
+          color: #fff;
+          opacity: 0.7;
+          font-size: 14px;
+          text-align: center; }
+  .wonder-app .wonder-homePage {
+    width: 100%;
+    height: 100%; }
+    .wonder-app .wonder-homePage .wonder-header {
+      width: 100%;
+      height: 85px;
+      background: #3e4849;
+      flex: initial;
+      display: flex; }
+      .wonder-app .wonder-homePage .wonder-header .header-logo {
+        height: 100%;
+        flex: initial;
+        display: flex;
+        padding-left: 200px;
+        align-items: center;
+        justify-content: center; }
+        .wonder-app .wonder-homePage .wonder-header .header-logo img {
+          width: 50px;
+          height: 50px; }
+        .wonder-app .wonder-homePage .wonder-header .header-logo .logo-text {
+          height: 85px;
+          line-height: 85px;
+          color: #d3d1d1;
+          margin-left: 20px;
+          font-size: 30px; }
+        .wonder-app .wonder-homePage .wonder-header .header-logo:hover {
+          cursor: pointer; }
+      .wonder-app .wonder-homePage .wonder-header .header-white {
+        width: 80%;
+        flex: 1; }
+      .wonder-app .wonder-homePage .wonder-header .header-nav {
+        flex: initial;
+        display: flex; }
+        .wonder-app .wonder-homePage .wonder-header .header-nav .nav-item {
+          width: 108px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .wonder-app .wonder-homePage .wonder-header .header-nav .nav-item img {
+            width: 22px;
+            height: 22px; }
+          .wonder-app .wonder-homePage .wonder-header .header-nav .nav-item a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 17px;
+            margin-left: 10px;
+            margin-top: 4px; }
+          .wonder-app .wonder-homePage .wonder-header .header-nav .nav-item:hover {
+            background: #1c1e1f; }
+            .wonder-app .wonder-homePage .wonder-header .header-nav .nav-item:hover a {
+              color: white; }
+        .wonder-app .wonder-homePage .wonder-header .header-nav .nav-profile {
+          width: 75.5px;
+          height: 100%; }
+          .wonder-app .wonder-homePage .wonder-header .header-nav .nav-profile img {
+            width: 40px;
+            height: 40px; }
+    .wonder-app .wonder-homePage .wonder-user-homePage {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content {
+        width: 100%;
+        flex: initial; }
+        .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-personal {
+          height: 160px;
+          width: 100%;
+          background-image: url("/img/home-bg.jpg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          z-index: -1;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-personal .personal-content {
+            width: 80%;
+            height: 100px;
+            display: flex; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-personal .personal-content .content-img {
+              height: 100px;
+              width: 100px; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-personal .personal-content .content-info {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              color: #fff;
+              margin-left: 20px; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-personal .personal-content .content-info .info-userName {
+                width: 200px;
+                height: 40px;
+                font-size: 30px;
+                margin-top: 6px; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-personal .personal-content .content-info .info-nickName {
+                width: 200px;
+                height: 30px;
+                font-size: 17px;
+                margin-top: 10px;
+                opacity: 0.7; }
+        .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav {
+          height: 65px;
+          display: flex;
+          background: #F4F4F2;
+          border-bottom: 1px solid #D5D9D8; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav .nav-white {
+            flex: initial;
+            width: 10%; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav .nav-item {
+            flex: initial;
+            width: 150px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #D5D9D8; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav .nav-item img {
+              width: 22px;
+              height: 22px; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav .nav-item .item-text {
+              margin: 4px 0 0 10px;
+              font-size: 16px; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav .nav-item:hover {
+              cursor: pointer; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav .nav-item:last-child {
+              border-right: 1px solid #D5D9D8; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .homePage-content .content-nav .nav-active {
+            background: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            color: #F16524; }
+      .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting {
+        width: 60%; }
+        .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item {
+          width: 100%;
+          border-bottom: 2px solod #000;
+          display: flex;
+          margin: 20px 0 20px 0;
+          align-items: center; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-title {
+            flex: initial;
+            font-size: 18px;
+            width: 20%;
+            text-align: center; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content {
+            flex: initial;
+            width: 80%; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content .wonder-imgUpload {
+              width: 100px;
+              height: 100px;
+              position: relative; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content .wonder-imgUpload .imgUpload-img {
+                width: 100%;
+                height: 100%; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content .wonder-imgUpload .imgUpload-content {
+                position: absolute;
+                background: #324447;
+                opacity: 0.5;
+                top: 0px;
+                right: 0px;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content .wonder-imgUpload .imgUpload-content img {
+                  width: 15px;
+                  height: 15px; }
+                .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content .wonder-imgUpload .imgUpload-content input {
+                  width: 100%;
+                  height: 100%;
+                  opacity: 0;
+                  position: absolute;
+                  top: 0px;
+                  left: 0px; }
+                .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content .wonder-imgUpload .imgUpload-content:hover {
+                  opacity: 1;
+                  cursor: pointer; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-setting .user-item .item-content input {
+              width: 100%;
+              height: 45px;
+              font-size: 20px; }
+      .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project {
+        width: 90%;
+        display: flex; }
+        .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-nav {
+          flex: initial;
+          width: 15%;
+          margin-left: 5%;
+          margin-top: 25px; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-nav .nav-item {
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #D5D9D8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-nav .nav-item .item-title {
+              font-size: 18px;
+              margin-top: 20px;
+              color: rgba(50, 68, 71, 0.5); }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-nav .nav-item .item-title:hover {
+                color: #324447; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-nav .nav-item .item-active {
+              color: #2999F0; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-nav .nav-item .item-upgrade .upgrade-title {
+              font-size: 14px;
+              color: rgba(50, 68, 71, 0.5);
+              margin-top: 20px;
+              margin-bottom: 5px; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-nav .nav-item .item-upgrade .upgrade-content {
+              font-size: 18px;
+              color: #000; }
+        .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content {
+          flex: initial;
+          display: flex;
+          flex-direction: column;
+          padding-top: 20px;
+          width: 80%; }
+          .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item {
+            width: 80%;
+            height: 135px;
+            flex: initial;
+            display: flex;
+            margin-top: 20px;
+            margin-left: 50px;
+            border-bottom: 1px solid #D5D9D8; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-profile {
+              flex: initial;
+              width: 110px;
+              height: 110px; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-profile img {
+                width: 110px;
+                height: 110px; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-profile:hover {
+                cursor: pointer;
+                color: #2999F0; }
+            .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content {
+              flex: 1;
+              height: 110px;
+              margin-left: 20px; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-name {
+                font-size: 24px;
+                font-weight: bold;
+                color: #324447; }
+                .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-name:hover {
+                  cursor: pointer;
+                  color: #2999F0; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data {
+                height: 26px;
+                display: flex;
+                font-size: 14px;
+                margin-top: 5px; }
+                .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item {
+                  flex: initial;
+                  height: 26px;
+                  line-height: 26px;
+                  border-right: 1px solid #D5D9D8;
+                  display: flex;
+                  margin-right: 20px; }
+                  .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item .item-title {
+                    color: #9ca9aa;
+                    height: 26px;
+                    line-height: 26px; }
+                    .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item .item-title img {
+                      width: 24px;
+                      height: 24px; }
+                  .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item .title-date {
+                    width: 70px; }
+                  .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item .item-date {
+                    width: 150px; }
+                  .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item .title-access {
+                    width: 50px; }
+                  .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item .item-access {
+                    width: 80px; }
+                  .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-data .data-item .item-number {
+                    font-size: 16px;
+                    width: 50px;
+                    margin-left: 20px;
+                    padding-top: 3px; }
+              .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-operate {
+                height: 35px;
+                margin-top: 13px;
+                display: flex; }
+                .wonder-app .wonder-homePage .wonder-user-homePage .wonder-user-project .project-content .repo-item .item-content .item-operate .operate-item {
+                  flex: initial;
+                  margin-right: 20px; }
+    .wonder-app .wonder-homePage .wonder-target-project {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .wonder-app .wonder-homePage .wonder-target-project .project-content {
+        width: 100%;
+        flex: initial; }
+        .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo {
+          height: 300px;
+          width: 100%;
+          background-image: url("/img/home-bg.jpg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          z-index: -1;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content {
+            width: 70%;
+            display: flex; }
+            .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-img {
+              flex: auto;
+              height: 200px;
+              width: 200px;
+              min-width: 200px; }
+            .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info {
+              flex: auto;
+              width: 90%;
+              flex-direction: column;
+              display: flex;
+              color: #fff;
+              margin-left: 30px; }
+              .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-name {
+                font-size: 36px;
+                margin-top: -10px;
+                font-weight: bold; }
+              .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-describe {
+                font-size: 22px;
+                margin-top: 10px; }
+              .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate {
+                width: 100%;
+                display: flex;
+                margin-top: 30px; }
+                .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-editor, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run {
+                  width: 150px;
+                  height: 44px;
+                  display: flex;
+                  background: #F16524;
+                  margin-right: 20px; }
+                  .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-editor a, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run a {
+                    text-decoration: none;
+                    color: #fff;
+                    display: flex;
+                    width: 100%;
+                    height: 100%; }
+                    .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-editor a .item-text, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run a .item-text {
+                      width: 100px;
+                      height: 44px;
+                      line-height: 44px;
+                      text-align: center;
+                      font-size: 16px; }
+                    .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-editor a .item-img, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run a .item-img {
+                      width: 50px;
+                      height: 100%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center; }
+                      .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-editor a .item-img img, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run a .item-img img {
+                        width: 30px;
+                        height: 30px; }
+                  .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-editor:hover, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run:hover {
+                    cursor: pointer; }
+                .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run {
+                  width: 120px; }
+                  .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run a .item-text {
+                    width: 70px; }
+                  .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-run a .item-img {
+                    width: 50px; }
+                .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-views, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-fork {
+                  width: 134px;
+                  height: 44px;
+                  margin-right: 20px;
+                  display: flex; }
+                  .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-views .item-text, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-fork .item-text {
+                    width: 90px;
+                    background: rgba(0, 0, 0, 0.3);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 16px; }
+                    .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-views .item-text img, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-fork .item-text img {
+                      width: 18px;
+                      height: 18px;
+                      margin-right: 7px; }
+                  .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-views .item-count, .wonder-app .wonder-homePage .wonder-target-project .project-content .content-repo .repo-content .content-info .info-operate .operate-fork .item-count {
+                    width: 44px;
+                    height: 44px;
+                    line-height: 44px;
+                    font-size: 16px;
+                    text-align: center;
+                    background: rgba(0, 0, 0, 0.12); }
+        .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav {
+          height: 65px;
+          display: flex;
+          background: #F4F4F2;
+          border-bottom: 1px solid #D5D9D8; }
+          .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav .nav-white {
+            flex: initial;
+            width: 10%; }
+          .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav .nav-item {
+            flex: initial;
+            width: 150px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #D5D9D8; }
+            .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav .nav-item img {
+              width: 22px;
+              height: 22px; }
+            .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav .nav-item .item-text {
+              margin: 4px 0 0 10px;
+              font-size: 16px; }
+            .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav .nav-item:hover {
+              cursor: pointer; }
+            .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav .nav-item:last-child {
+              border-right: 1px solid #D5D9D8; }
+          .wonder-app .wonder-homePage .wonder-target-project .project-content .content-nav .nav-active {
+            background: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            color: #F16524; }
+      .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView {
+        width: 90%;
+        height: 100%;
+        display: flex; }
+        .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-nav {
+          flex: initial;
+          width: 300px;
+          margin-left: 5%;
+          margin-top: 25px; }
+          .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-nav .nav-item {
+            width: 100%;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-nav .nav-item .item-type {
+              width: 100%;
+              height: 40px;
+              border-bottom: 1px solid #D5D9D8;
+              font-size: 17px;
+              color: #adb7b9; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-nav .nav-item .item-content {
+              display: flex;
+              flex-direction: column;
+              width: 100%; }
+              .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-nav .nav-item .item-content .content-team {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between; }
+                .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-nav .nav-item .item-content .content-team .team-header {
+                  flex: initial;
+                  color: #adb7b9; }
+        .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-content {
+          flex: initial;
+          width: 75%;
+          height: 100%;
+          padding-left: 100px; }
+          .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-content .content-title {
+            font-weight: bold;
+            font-size: 24px;
+            margin-left: 35px;
+            margin-top: 25px; }
+          .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-content .content-text {
+            font-size: 20px;
+            margin-left: 35px;
+            margin-top: 10px; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-content .content-text .text-color {
+              color: #F16524; }
+          .wonder-app .wonder-homePage .wonder-target-project .wonder-project-overView .project-content .content-tip {
+            font-size: 20px;
+            margin-left: 35px;
+            margin-top: 10px;
+            color: #F16524; }
+      .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting {
+        width: 60%; }
+        .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item {
+          width: 100%;
+          border-bottom: 2px solod #000;
+          display: flex;
+          margin: 20px 0 20px 0;
+          align-items: center;
+          position: relative; }
+          .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-title {
+            flex: initial;
+            font-size: 18px;
+            width: 20%;
+            text-align: center; }
+          .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content {
+            flex: initial;
+            width: 80%; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content .wonder-imgUpload {
+              width: 100px;
+              height: 100px;
+              position: relative; }
+              .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content .wonder-imgUpload .imgUpload-img {
+                width: 100%;
+                height: 100%; }
+              .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content .wonder-imgUpload .imgUpload-content {
+                position: absolute;
+                background: #324447;
+                opacity: 0.5;
+                top: 0px;
+                right: 0px;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content .wonder-imgUpload .imgUpload-content img {
+                  width: 15px;
+                  height: 15px; }
+                .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content .wonder-imgUpload .imgUpload-content input {
+                  width: 100%;
+                  height: 100%;
+                  opacity: 0;
+                  position: absolute;
+                  top: 0px;
+                  left: 0px; }
+                .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content .wonder-imgUpload .imgUpload-content:hover {
+                  opacity: 1;
+                  cursor: pointer; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-content input {
+              width: 100%;
+              height: 45px;
+              font-size: 20px; }
+          .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-save {
+            position: absolute;
+            right: 0px;
+            top: 30px;
+            width: 120px;
+            height: 44px;
+            display: flex;
+            background: #F16524;
+            text-decoration: none;
+            color: #fff;
+            display: flex; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-save .save-text {
+              width: 70px;
+              height: 44px;
+              line-height: 44px;
+              text-align: center;
+              font-size: 16px; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-save .save-img {
+              width: 50px;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-save .save-img img {
+                width: 30px;
+                height: 30px; }
+            .wonder-app .wonder-homePage .wonder-target-project .wonder-project-setting .user-item .item-save:hover {
+              cursor: pointer; }
+  .wonder-app .wonder-publishRepo {
+    width: 100%;
+    height: 100%; }
+    .wonder-app .wonder-publishRepo .wonder-header {
+      width: 100%;
+      height: 85px;
+      background: #3e4849;
+      flex: initial;
+      display: flex; }
+      .wonder-app .wonder-publishRepo .wonder-header .header-logo {
+        height: 100%;
+        flex: initial;
+        display: flex;
+        padding-left: 200px;
+        align-items: center;
+        justify-content: center; }
+        .wonder-app .wonder-publishRepo .wonder-header .header-logo img {
+          width: 50px;
+          height: 50px; }
+        .wonder-app .wonder-publishRepo .wonder-header .header-logo .logo-text {
+          height: 85px;
+          line-height: 85px;
+          color: #d3d1d1;
+          margin-left: 20px;
+          font-size: 30px; }
+        .wonder-app .wonder-publishRepo .wonder-header .header-logo:hover {
+          cursor: pointer; }
+      .wonder-app .wonder-publishRepo .wonder-header .header-white {
+        width: 80%;
+        flex: 1; }
+      .wonder-app .wonder-publishRepo .wonder-header .header-nav {
+        flex: initial;
+        display: flex; }
+        .wonder-app .wonder-publishRepo .wonder-header .header-nav .nav-item {
+          width: 108px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .wonder-app .wonder-publishRepo .wonder-header .header-nav .nav-item img {
+            width: 22px;
+            height: 22px; }
+          .wonder-app .wonder-publishRepo .wonder-header .header-nav .nav-item a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 17px;
+            margin-left: 10px;
+            margin-top: 4px; }
+          .wonder-app .wonder-publishRepo .wonder-header .header-nav .nav-item:hover {
+            background: #1c1e1f; }
+            .wonder-app .wonder-publishRepo .wonder-header .header-nav .nav-item:hover a {
+              color: white; }
+        .wonder-app .wonder-publishRepo .wonder-header .header-nav .nav-profile {
+          width: 75.5px;
+          height: 100%; }
+          .wonder-app .wonder-publishRepo .wonder-header .header-nav .nav-profile img {
+            width: 40px;
+            height: 40px; }
+    .wonder-app .wonder-publishRepo .wonder-publishRepo-main {
+      width: 100%;
+      height: 100%; }
+      .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content {
+        width: 100%; }
+        .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-personal {
+          height: 140px;
+          width: 100%;
+          background-image: url("/img/home-bg.jpg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          z-index: -1;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-personal .personal-content {
+            width: 80%;
+            height: 100px;
+            line-height: 100px;
+            color: #fff;
+            display: flex;
+            font-size: 30px;
+            font-weight: bold; }
+        .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav {
+          height: 65px;
+          display: flex;
+          background: #F4F4F2;
+          border-bottom: 1px solid #D5D9D8; }
+          .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav .nav-white {
+            flex: initial;
+            width: 10%; }
+          .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav .nav-item {
+            flex: initial;
+            width: 150px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #D5D9D8; }
+            .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav .nav-item img {
+              width: 22px;
+              height: 22px; }
+            .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav .nav-item .item-text {
+              margin: 4px 0 0 10px;
+              font-size: 16px; }
+            .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav .nav-item:hover {
+              cursor: pointer; }
+            .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav .nav-item:last-child {
+              border-right: 1px solid #D5D9D8; }
+          .wonder-app .wonder-publishRepo .wonder-publishRepo-main .homePage-content .content-nav .nav-active {
+            background: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            color: #F16524; }
+      .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo {
+        width: 100%;
+        height: 100%; }
+        .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list {
+          width: 90%;
+          margin-left: 10%;
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 30px; }
+          .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item {
+            width: 370px;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; }
+            .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-img {
+              width: 300px;
+              height: 300px;
+              margin-top: 35px;
+              position: relative; }
+              .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-img a {
+                width: 300px;
+                height: 300px; }
+                .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-img a .img-views {
+                  position: absolute;
+                  height: 30px;
+                  color: rgba(255, 255, 255, 0.75);
+                  background: rgba(50, 68, 71, 0.75);
+                  right: 10px;
+                  top: 10px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 5px 15px 5px 15px; }
+                  .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-img a .img-views img {
+                    width: 20px;
+                    height: 20px; }
+                  .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-img a .img-views span {
+                    margin-left: 13px; }
+                .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-img a .img-content {
+                  width: 300px;
+                  height: 300px; }
+            .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-repoName {
+              width: 300px;
+              font-size: 22px;
+              font-weight: bold;
+              margin-top: 12px; }
+              .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-repoName:hover {
+                color: #2999F0;
+                cursor: pointer; }
+            .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-userName {
+              width: 300px;
+              font-size: 18px; }
+              .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-list .repo-item .item-userName:hover {
+                color: #2999F0;
+                cursor: pointer; }
+        .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-load {
+          width: 80%;
+          margin-left: 10%;
+          height: 80px;
+          background: #F1F1EF;
+          color: #324447;
+          opacity: 0.5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 26px;
+          margin-top: 10px;
+          margin-bottom: 40px; }
+          .wonder-app .wonder-publishRepo .wonder-publishRepo-main .wonder-publish-repo .repo-load:hover {
+            opacity: 1;
+            background: #e4e4e4; }

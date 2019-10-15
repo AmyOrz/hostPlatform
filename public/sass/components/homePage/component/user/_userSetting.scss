@@ -1,0 +1,26 @@
+.wonder-user-setting{
+    width:60%;
+    .user-item{
+        width:100%;
+        border-bottom: 2px solod #000;
+        display: flex;
+        margin:20px 0 20px 0;
+        align-items: center;
+        .item-title{
+            flex:initial;
+            font-size:18px;
+            width:20%;
+            text-align: center;
+        }
+        .item-content{
+            flex:initial;
+            width:80%;
+            @import "../../../ui/imgUpload";
+            input{
+                width:100%;
+                height:45px;
+                font-size:20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "wonder-hostplatform",
+  "reason": {
+    "react-jsx": 2
+  },
+  "package-specs": [
+    "commonjs",
+    "es6"
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "bsc-flags": [
+    "-bs-no-version-header",
+    "-bs-super-errors"
+  ],
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react",
+    "reason-apollo",
+    "wonder-reroute",
+    "bs-express",
+    "bs-fetch",
+    "bs-moment",
+    "@justgage/reason-cookie",
+    "wonder-bs-json",
+    "wonder-bs-graphql",
+    "wonder-bs-most",
+    "wonder-commonlib",
+    "wonder-log",
+    "wonder-bs-apollo-server-express"
+  ],
+  "bs-dev-dependencies": [],
+  "refmt": 3,
+  "ppx-flags": [
+    "graphql_ppx/ppx"
+  ]
+}
